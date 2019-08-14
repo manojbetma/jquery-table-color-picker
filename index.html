@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Table</title>
+   <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+   <link href="assets/table-color.css" rel="stylesheet" type="text/css" />
+   <link href="assets/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<table class="my-table" style="width:100%">
+<thead>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  </thead>
+  
+  <tbody>
+  <tr>
+    <td style="color:#FF9999;background-color:#efefef;">Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>80</td>
+  </tr>
+  </tbody>
+</table>
+<script src="assets/jquery.min.js"></script>
+<script src="assets/jquery.table-color.js"></script>
+<script>
+  $(document).ready(function() {
+       $('.my-table').tblcolor();
+  });
+</script>
+
+
+
+</body>
+</html>
