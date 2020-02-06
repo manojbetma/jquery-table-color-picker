@@ -3,10 +3,18 @@
 <head>
    <title>Table</title>
    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-   <link href="assets/table-color.css" rel="stylesheet" type="text/css" />
+   <link href="assets/spectrum/spectrum.css" rel="stylesheet" type="text/css" />
+   <link href="assets/table-color.css?v=14" rel="stylesheet" type="text/css" />
    <link href="assets/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+
+<img class="img-btn tt-normal" onclick="tbl_text_transform('.my-table','normal')" src="assets/img/transform-normal.png" >
+
+<img class="img-btn tt-uppercase" onclick="tbl_text_transform('.my-table','uppercase')" src="assets/img/transform-uc.png" >
+
+<img class="img-btn tt-lowercase" onclick="tbl_text_transform('.my-table','lowercase')" src="assets/img/transform-lc.png" >
+
 <table class="my-table" style="width:100%">
 <thead>
   <tr>
@@ -18,8 +26,8 @@
   
   <tbody>
   <tr>
-    <td style="color:#FF9999;background-color:#efefef;">Jill</td>
-    <td>Smith</td>
+    <td style="color:#FF9999;background-color:#efefef;">jill</td>
+    <td><ul><li>smith</li></ul></td>
     <td>50</td>
   </tr>
   <tr>
@@ -28,18 +36,31 @@
     <td>94</td>
   </tr>
   <tr>
-    <td>John</td>
-    <td>Doe</td>
+    <td>JOHN</td>
+    <td>DOE</td>
     <td>80</td>
   </tr>
   </tbody>
 </table>
 <script src="assets/jquery.min.js"></script>
-<script src="assets/jquery.table-color.js"></script>
+<script src="assets/spectrum/spectrum.js"></script>
+<script src="assets/jquery.table-color.js?v=25"></script>
 <script>
   $(document).ready(function() {
-       $('.my-table').tblcolor();
+       $('.my-table').tblcolor(
+	   {
+	   color:true, 
+	   background:true ,
+	   reset:true,
+	   toLower:true,
+	   toUpper:true,
+	   toNormal:true
+	   });
+	   
+	   
   });
+  
+
 </script>
 
 
